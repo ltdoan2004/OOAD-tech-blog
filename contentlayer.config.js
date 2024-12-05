@@ -9,13 +9,14 @@ const Blog = defineDocumentType(() => ({
         publishedAt: {type: 'date', required: true},
         updatedAt: {type: 'date', required: true},
         description: {type: 'string', required: true},
-        image: {type: 'string', required: true},
+        image: {type: 'image'},
         isPublished: {type: 'boolean', required: true},
         author: {type: 'string', required: true},
         tags: {type: 'list', of: { type: 'string' }, required: true},
     },
     computedFields: {
         url: {type: 'string', resolve: (doc) => `/blogs/${doc._raw.flattenedPath}`},
+
     },
 }))
 

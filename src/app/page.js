@@ -5,7 +5,7 @@ export default function Home() {
   console.log(allBlogs)
   return (
     <main className="flex flex-col items-center justify-center">
-      <HomeCoverSection blogs={allBlogs}/>
+      <HomeCoverSection blogs={allBlogs}/> 
     </main>
   )
 }
